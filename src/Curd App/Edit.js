@@ -1,22 +1,31 @@
 import axios from 'axios';
-import React from 'react';
+import React, { useEffect } from 'react'
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
-export default function Create() {
+export default function Edit() {
+
+    const {id} = useParams();
 
     const [ inputData, setInputData ] = useState({
+        id: id,
         name: "",
         email: ""
     });
 
     const navigate = useNavigate();
 
+    useEffect(() => {
+        axios.get("http://localhost:3030/users/" + id)
+        .then(res => setInputData(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:3030/users/", inputData)
+        axios.put("http://localhost:3030/users/" + id, inputData)
         .then(res => {
-            alert("Data Posted Successfully!")
+            alert("Data Updated Successfully!")
             navigate("/")
         })
     }
@@ -26,11 +35,22 @@ export default function Create() {
         <div className='w-50 border bg-secondary text-white p-5'>
             <form onSubmit={handleSubmit}>
                 <div>
+                    <label htmlFor='id'>ID:</label>
+                    <input 
+                        type='number' 
+                        name='id' 
+                        className='form-control' 
+                        disabled
+                        value={inputData.id}
+                    />
+                </div>
+                <div>
                     <label htmlFor='name'>Name:</label>
                     <input 
                         type='text' 
                         name='name' 
                         className='form-control' 
+                        value={inputData.name}
                         onChange={e => setInputData({...inputData, name: e.target.value})}
                     />
                 </div>
@@ -39,12 +59,13 @@ export default function Create() {
                     <input 
                         type='email' 
                         name='email' 
-                        className='form-control' 
+                        className='form-control'
+                        value={inputData.email}
                         onChange={e => setInputData({...inputData, email: e.target.value})}
                     />
                 </div>
                 <br />
-                <button className='btn btn-info'>Submit</button>
+                <button className='btn btn-info'>Update</button>
             </form>
         </div>
     </div>

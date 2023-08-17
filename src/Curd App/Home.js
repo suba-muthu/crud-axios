@@ -32,7 +32,7 @@ export default function Home() {
                 <td>{item.name}</td>
                 <td>{item.email}</td>
                 <td>
-                  <button>Edit</button>
+                  <Link className='text-decoration-none btn btn-sm btn-success' to={`/edit/${item.id}`}>Edit</Link>
                   <button>Delete</button>
                   <button>Read</button>
                 </td>

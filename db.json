@@ -2,12 +2,12 @@
   "users": [
     {
       "id": 1,
-      "name": "pavi",
-      "email": "pavi@gmail.com"
+      "name": "pavi saravanan",
+      "email": "pavi_saravanan@gmail.com"
     },
     {
       "id": 2,
-      "name": "sangeetha",
+      "name": "sangeetha Ramkumar",
       "email": "sangeetha@gmail.com"
     },
     {
@@ -29,31 +29,6 @@
       "name": "newData",
       "email": "newData@gmail.com",
       "id": 6
-    },
-    {
-      "name": "ram",
-      "email": "ram@gmail.com",
-      "id": 7
-    },
-    {
-      "name": "jdhjfd",
-      "email": "kjdhjks@gmail.com",
-      "id": 8
-    },
-    {
-      "name": "jksdhdsf",
-      "email": "jkhfdjhf@gmail.com",
-      "id": 9
-    },
-    {
-      "name": "jhdsjhf",
-      "email": "krjngjk@gmail.com",
-      "id": 10
-    },
-    {
-      "name": "",
-      "email": "",
-      "id": 11
     }
   ]
 }
