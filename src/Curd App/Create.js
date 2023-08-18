@@ -31,6 +31,7 @@ export default function Create() {
                         type='text' 
                         name='name' 
                         className='form-control' 
+                        required
                         onChange={e => setInputData({...inputData, name: e.target.value})}
                     />
                 </div>
@@ -40,9 +41,10 @@ export default function Create() {
                         type='email' 
                         name='email' 
                         className='form-control' 
+                        required
                         onChange={e => setInputData({...inputData, email: e.target.value})}
                     />
-                </div>
+                </div>  
                 <br />
                 <button className='btn btn-info'>Submit</button>
             </form>

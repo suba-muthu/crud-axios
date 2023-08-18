@@ -2,8 +2,8 @@
   "users": [
     {
       "id": 1,
-      "name": "pavi saravanan",
-      "email": "pavi_saravanan@gmail.com"
+      "name": "pavithra",
+      "email": "pavithra@gmail.com"
     },
     {
       "id": 2,
@@ -21,14 +21,14 @@
       "email": "suba@gmail.com"
     },
     {
-      "id": 5,
-      "name": "riya",
-      "email": "riya@gmail.com"
-    },
-    {
       "name": "newData",
       "email": "newData@gmail.com",
       "id": 6
+    },
+    {
+      "name": "jsgd",
+      "email": "hdskj@gmail.com",
+      "id": 7
     }
   ]
 }
